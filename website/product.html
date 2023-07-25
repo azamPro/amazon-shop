@@ -3,76 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product</title>
+    <!-- Main style -->
+    <link rel="stylesheet" href="css/main-style.css">
+    <!-- css file -->
     <link rel="stylesheet" href="css/product.css">
+    <!-- font awesome Libery -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <!-- Start header -->
+        <div class="container">
+            <a href="#" class="logo">
+                <h2>Amazon-shop</h2>
+            </a>
+            <div class="search">
+                <input type="search" placeholder="type kyword" class="in-search">
+            </div>
+            <nav>
+                <i class="fas fa-bars toggle-menu"></i>
+                <ul>
+                    <li><a href="home.html" >Home</a></li>
+                    <li><a href="product.html" class="active">Product</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li><a href="cart.html">cart</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="index.html">Sign-in</a></li>
+                </ul>
+            </nav>
+            <div class="form-1 hide">
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+            <div class="form-2">
+                <a href="index.html">sign-in</a>
+            </div>
+        </div>
+        <!-- end header -->
+    </header>
+    <!-- Start product -->
     <div class="product">
-        <div class="title">
-            <h2 class="titletxt"><span>P</span>roudct</h2>
-        </div>
-        <div class="content">
-        <div class="box">
-            <div class="imgbx">
-                <img src="image/cam.jpg" alt="Camera">
-            </div>
-            <div class="text">
-                <h3>Camera</h3>
-                <h4>price: 4000</h4>
-            </div>
-            <div class="btn">
-                <button class="added">
-                    <img src="image/shopping-cart.png" alt="cart">
-                </button>
-                <button class="show">show</button>
-            </div>
-        </div>
-        <div class="box">
-            <div class="imgbx">
-                <img src="image/bag.jpg" alt="Bag">
-            </div>
-            <div class="text">
-                <h3>Bag</h3>
-                <h4>price: 4000</h4>
-            </div>
-            <div class="btn">
-                <button class="added">
-                    <img src="image/shopping-cart.png" alt="cart">
-                </button>
-                <button class="show">show</button>
-            </div>
-        </div>
-        <div class="box">
-            <div class="imgbx">
-                <img src="image/shoes.jpg" alt="shoes">
-            </div>
-            <div class="text">
-                <h3>Shoes</h3>
-                <h4>price: 4000</h4>
-            </div>
-            <div class="btn">
-                <button class="added" >
-                    <img src="image/shopping-cart.png" alt="cart">
-                </button>
-                <button class="show">show</button>
-            </div>
-        </div>
-        <div class="box">
-            <div class="imgbx">
-                <img src="image/watch.jpg" alt="Watch">
-            </div>
-            <div class="text">
-                <h3>Watch</h3>
-                <h4>price: 4000</h4>
-            </div>
-            <div class="btn">
-                <button class="added">
-                    <img src="image/shopping-cart.png" alt="cart">
-                </button>
-                <button class="show">show</button>
+        <div class="container">
+            <h1 class="spcial-section">PRODUCT</h1>
+            <div class="container2">
+                <div class="card">
+                    <div class="box">
+                        <div class="imgbx">
+                            <img src="image/cam.jpg" alt="Camera">
+                        </div>
+                        <div class="text">
+                            <h3>Camera</h3>
+                            <h4>this is camera canon d650</h4>
+                        </div>
+                        <div class="btn">
+                            <a href="Product-Details-Page.html"><button class="show" >Buy now</button></a>
+                            <p>SAR 3299.9</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbx">
+                            <img src="image/bag.jpg" alt="Bag">
+                        </div>
+                        <div class="text">
+                            <h3>Bag</h3>
+                            <h4>this is camera canon d650</h4>
+                        </div>
+                        <div class="btn">
+                            <a href="Product-Details-Page.html"><button class="show" >Buy now</button></a>>
+                            <p>SAR 9.9</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbx">
+                            <img src="image/shoes.jpg" alt="shoes">
+                        </div>
+                        <div class="text">
+                            <h3>Shoes</h3>
+                            <h4>this is camera canon d650</h4>
+                        </div>
+                        <div class="btn">
+                            <a href="Product-Details-Page.html"><button class="show" >Buy now</button></a>
+                            <p>SAR 359.9</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbx">
+                            <img src="image/watch.jpg" alt="Watch">
+                        </div>
+                        <div class="text">
+                            <h3>Watch</h3>
+                            <h4>this is camera canon d650</h4>
+                        </div>
+                        <div class="btn">
+                            <a href="Product-Details-Page.html"><button class="show" >Buy now</button></a>
+                            <p>SAR 199.9</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbx">
+                            <img src="image/cam.jpg" alt="Camera">
+                        </div>
+                        <div class="text">
+                            <h3>Camera</h3>
+                            <h4>this is camera canon d650</h4>
+                        </div>
+                        <div class="btn">
+                            <a href="Product-Details-Page.html"><button class="show" >Buy now</button></a>
+                            <p>SAR 3299.9</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbx">
+                            <img src="image/bag.jpg" alt="Bag">
+                        </div>
+                        <div class="text">
+                            <h3>Bag</h3>
+                            <h4>this is camera canon d650</h4>
+                        </div>
+                        <div class="btn">
+                            <a href="Product-Details-Page.html"><button class="show" >Buy now</button></a>>
+                            <p>SAR 9.9</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbx">
+                            <img src="image/shoes.jpg" alt="shoes">
+                        </div>
+                        <div class="text">
+                            <h3>Shoes</h3>
+                            <h4>this is camera canon d650</h4>
+                        </div>
+                        <div class="btn">
+                            <a href="Product-Details-Page.html"><button class="show" >Buy now</button></a>
+                            <p>SAR 359.9</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbx">
+                            <img src="image/watch.jpg" alt="Watch">
+                        </div>
+                        <div class="text">
+                            <h3>Watch</h3>
+                            <h4>this is camera canon d650</h4>
+                        </div>
+                        <div class="btn">
+                            <a href="Product-Details-Page.html"><button class="show" >Buy now</button></a>
+                            <p>SAR 199.9</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbx">
+                            <img src="image/cam.jpg" alt="Camera">
+                        </div>
+                        <div class="text">
+                            <h3>Camera</h3>
+                            <h4>this is camera canon d650</h4>
+                        </div>
+                        <div class="btn">
+                            <a href="Product-Details-Page.html"><button class="show" >Buy now</button></a>
+                            <p>SAR 3299.9</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbx">
+                            <img src="image/bag.jpg" alt="Bag">
+                        </div>
+                        <div class="text">
+                            <h3>Bag</h3>
+                            <h4>this is camera canon d650</h4>
+                        </div>
+                        <div class="btn">
+                            <a href="Product-Details-Page.html"><button class="show" >Buy now</button></a>>
+                            <p>SAR 9.9</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbx">
+                            <img src="image/shoes.jpg" alt="shoes">
+                        </div>
+                        <div class="text">
+                            <h3>Shoes</h3>
+                            <h4>this is camera canon d650</h4>
+                        </div>
+                        <div class="btn">
+                            <a href="Product-Details-Page.html"><button class="show" >Buy now</button></a>
+                            <p>SAR 359.9</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="imgbx">
+                            <img src="image/watch.jpg" alt="Watch">
+                        </div>
+                        <div class="text">
+                            <h3>Watch</h3>
+                            <h4>this is camera canon d650</h4>
+                        </div>
+                        <div class="btn">
+                            <a href="Product-Details-Page.html"><button class="show" >Buy now</button></a>
+                            <p>SAR 199.9</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    </div>    
+
+    <!-- Start footer -->
+    <footer>
+        <div class="container">
+            <div class="content">
+                <div class="text">
+                    <p>2023 Made by the best teem</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
 </body>
 </html>
