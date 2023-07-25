@@ -315,3 +315,8 @@ p{
                 }
 
 }
+
+p#error-msg-login,
+div#error-msg-signup {
+    color: red;
+}

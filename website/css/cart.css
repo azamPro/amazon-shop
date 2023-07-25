@@ -1,0 +1,107 @@
+body{
+    max-height: 100vh;
+    background-color: #eaeded;
+}
+header{
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 0;
+}
+
+/* cart style*/
+.cart
+{
+    margin: 120px auto;
+}
+.cart .container {
+    max-height: 420px;
+    overflow-y: scroll;
+    
+}
+table
+{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+.cart-info
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+th
+{
+    text-align: left;
+    padding: 5px;
+    color:aliceblue;
+    background: #4682A9;
+    font-weight: normal;
+}
+td
+{
+    padding: 10px 5px;
+}
+td input
+{
+    width: 30px;
+    height: 20px;
+    padding: 5px;
+}
+td a
+{
+    color: #f50a0a;
+    font-size: 12px;
+    text-decoration: none;
+}
+td img
+{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+/* box the payment */
+.price .container .content{
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 15px;
+}
+.price .container .content .up{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.price .container .content .up .col-1 h3{
+    margin-top: 10px;
+}
+.price .container .content .up .col-1 h3:nth-of-type(2){
+    color: rgba(219, 12, 12, 0.856);
+}
+.price .container .content .up .col-2{
+    width: 350px;
+}
+.price .container .content .down{
+    margin-top: 10px;
+    padding-top: 40px;
+    border-top: 1px solid black;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.price .container .content .down a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 20px 350px;
+    border-radius: 30px;
+}
+
+
+footer{
+    margin-top: 20px;
+}

@@ -1,113 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>صفحة الدعم</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-			background-color: #606060;
-		}
-		
-		h1 {
-			text-align: center;
-			margin-top: 50px;
-		}
-		
-		p {
-			margin: 20px 0;
-			line-height: 1.5;
-		}
-		
-		form {
-			max-width: 500px;
-			margin: 0 auto;
-			background-color: #fff;
-			padding: 30px;
-			box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-			border-radius: 5px;
-		}
-		
-		label {
-			display: block;
-			font-size: 16px;
-			font-weight: bold;
-			margin-bottom: 10px;
-		}
-		
-		input, textarea {
-			display: block;
-			width: 100%;
-			padding: 10px;
-			border: 1px solid #ccc;
-			border-radius: 5px;
-			margin-bottom: 20px;
-			font-size: 16px;
-			box-sizing: border-box;
-		}
-		
-		input[type="submit"] {
-			background-color: #4CAF50;
-			color: #fff;
-			border: none;
-			cursor: pointer;
-			padding: 10px 20px;
-			border-radius: 5px;
-			font-size: 16px;
-			transition: all 0.3s ease;
-			margin-bottom: 0;
-		}
-		
-		input[type="submit"]:hover {
-			background-color: #3e8e41;
-		}
-		
-		ul {
-			list-style: none;
-			margin: 20px 0;
-			padding: 0;
-			text-align: center;
-		}
-		
-		li {
-			display: inline-block;
-			margin: 0 10px;
-			font-size: 16px;
-			color: #999;
-		}
-		
-		li:before {
-			content: "\2022";
-			color: #999;
-			margin-right: 5px;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon shop</title>
+    <!-- Main style -->
+    <link rel="stylesheet" href="css/main-style.css">
+	<link rel="stylesheet" href="css/support.css">
+    <!-- font awesome Libery -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<h1>اتصل بنا</h1>
-	<p>إذا كان لديك أي أسئلة أو مشاكل تحتاج إلى مساعدة، يرجى ملء النموذج أدناه:</p>
-	
-	<form action="process_form.php" method="POST">
-		<label for="name">الاسم:</label>
-		<input type="text" id="name" name="name">
-		
-		<label for="email">البريد الإلكتروني:</label>
-		<input type="email" id="email" name="email">
-		
-		<label for="subject">الموضوع:</label>
-		<input type="text" id="subject" name="subject">
-		
-		<label for="message">الرسالة:</label>
-		<textarea id="message" name="message"></textarea>
-		
-		<input type="submit" value="إرسال">
-	</form>
-
-	<p>يمكنك أيضًا الاتصال بنا عبر البريد الإلكتروني أو الهاتف:</p>
-	<ul>
-		<li>البريد الإلكتروني: support@example.com</li>
-		<li>الهاتف: 123456789</li>
-	</ul>
+	<div class="container1">
+		<form action="">
+			<h3>Support</h3>
+			<input type="text" id="name" placeholder="Name" required>
+			<input type="email" id="email" placeholder="email" required>
+			<textarea  id="message"rows="5" placeholder="Type your problem"></textarea>
+			<button type="submit">Send</button>
+		</form>
+	</div>
 </body>
 </html>
