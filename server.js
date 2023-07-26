@@ -43,7 +43,7 @@ webApp.post('/addUser',(req,res)=>{
 })
 
 let users = [
-    { email: 'jawahirah@gmail.com', name: 'jawahirah', password: '1234', cart:[{itemName:'watch',numberOfItems:1,cost:20}] }
+    { email: 'jawahirah@gmail.com', name: 'jawahirah', password: '1234', cart:[{itemName:'watch',numberOfItems:1,cost:20}], totalCost:20 }
 ]
 
 let authenticationLogin = (email, password) => {
