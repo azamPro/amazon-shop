@@ -72,7 +72,11 @@ Creating an account  has several advantages
 
 We take pride in our outstanding customer support. If you have any questions, or concerns, or need assistance, don't hesitate to contact our support team:
 
-- **Email**: support@ourstore.com
+- **Email**:
+- Azam.alkhodiriy@gmail.com
+- rayanruddahaltalhi@gmail.com
+- 
+
  
 
 Our dedicated support team is here to help you with any order inquiries, account issues, or general assistance you may require.
