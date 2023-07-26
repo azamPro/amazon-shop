@@ -181,7 +181,7 @@ header nav ul li a{
     z-index: 2;
 }
 @media (min-width: 766px){
-    header nav ul li:nth-child(4){
+    header nav ul li:nth-child(3){
         display: none;
     }
     header nav ul li:last-child{
@@ -351,6 +351,9 @@ header .form-2{
     background-color: #f8f7f7;
     padding: 10px;
     position: relative;
+}
+.product .container2 .box a{
+    text-decoration: none;
 }
 .product .container2 .box .imgbx
 {

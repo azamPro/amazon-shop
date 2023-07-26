@@ -8,11 +8,14 @@ header{
     position: fixed;
     top: 0;
 }
+header .container{
+    padding: 10px;
+}
 
 /* cart style*/
 .cart
 {
-    margin: 120px auto;
+    margin: 120px auto 30px;
 }
 .cart .container {
     max-height: 420px;
@@ -89,9 +92,13 @@ td img
 .price .container .content .down{
     margin-top: 10px;
     padding-top: 40px;
+    padding-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
     border-top: 1px solid black;
     margin-bottom: 15px;
     text-align: center;
+    min-height: 30px;
 }
 .price .container .content .down a{
     text-decoration: none;
@@ -100,8 +107,18 @@ td img
     padding: 20px 350px;
     border-radius: 30px;
 }
+@media (max-width: 991px){
+    .price .container .content .down a{
+        padding: 20px 140px;
+    }   
+}
+@media (max-width: 767px){
+    .price .container .content .down a{
+        padding: 20px 30px;
+    }     
+}
 
 
 footer{
-    margin-top: 20px;
+    margin-top: 30px;
 }

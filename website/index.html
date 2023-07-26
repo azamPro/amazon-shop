@@ -10,81 +10,125 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- main style -->
+        <link rel="stylesheet" href="css/main-style.css">
+        <!-- font awesome Libery -->
+    <link rel="stylesheet" href="css/all.min.css">
     <!-- css stylesheet -->
     <link rel="stylesheet" href="css/login-signup.css">
 </head>
 
 <body>
-
-    <div class="container" id="container">
-        <div class="form-container sign-up-container">
-            <form action="#" id="signup-form">
-                <h1>Create Account</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email for registration</span>
-                <div class="infield">
-                    <input type="text" placeholder="Name" id="name-signup" required />
-                    <label></label>
-                </div>
-                <div class="infield">
-                    <input type="email" placeholder="Email" name="email" id="email-signup" required />
-                    <label></label>
-                </div>
-                <div class="infield">
-                    <input type="password" placeholder="Password" id="password-signup" required/>
-                    <label></label>
-                </div>
-                <div id="error-msg-signup"></div>
-                <button id="submit-btn-signup">Sign Up</button>
-            </form>
-        </div>
-        <div class="form-container sign-in-container">
-            <form action="#" id="login-form">
-                <h1>Sign in</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your account</span>
-                <div class="infield">
-                    <input type="email" placeholder="Email" name="email" id="email-login" required/>
-                    <label></label>
-                </div>
-                <div class="infield">
-                    <input type="password" placeholder="Password" id="password-login" required/>
-                    <label></label>
-                </div>
-                <p id="error-msg-login"></p>
-                <a href="#" class="forgot">Forgot your password?</a>
-                <button type="submit" id="submit-btn-login">Sign In</button>
-            </form>
-        </div>
-        <div class="overlay-container" id="overlayCon">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <h1>Welcome Back!</h1>
-                    <p>To keep connected with us please login with your personal info</p>
-                    <button>Sign In</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button>Sign Up</button>
-                </div>
+    <!-- Start header -->
+    <header>
+        <div class="container">
+            <a href="home.html" class="logo">
+                <h2>Amazon-shop</h2>
+            </a>
+            <div class="search">
+                <input type="search" placeholder="type kyword" class="in-search">
             </div>
-            <button id="overlayBtn"></button>
+            <nav>
+                <i class="fas fa-bars toggle-menu"></i>
+                <ul>
+                    <li><a href="home.html" class="">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="cart.html">cart</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="index.html">Sign-in</a></li>
+                </ul>
+            </nav>
+            <div class="form-1 hide">
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+            <div class="form-2">
+                <a href="index.html">sign-in</a>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+    <div class="body">
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1>Create Account</h1>
+                    <!-- <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div> -->
+                    <span> use your email for registration</span>
+                    <div class="infield">
+                        <input type="text" placeholder="Name" />
+                        <label></label>
+                    </div>
+                    <div class="infield">
+                        <input type="email" placeholder="Email" name="email" />
+                        <label></label>
+                    </div>
+                    <div class="infield">
+                        <input type="password" placeholder="Password" />
+                        <label></label>
+                    </div>
+                    <button>Sign Up</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1>Sign in</h1>
+                    <!-- <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div> -->
+                    <span> use your account</span>
+                    <div class="infield">
+                        <input type="email" placeholder="Email" name="email" id="email-login" />
+                        <label></label>
+                    </div>
+                    <div class="infield">
+                        <input type="password" placeholder="Password" id="password-login"/>
+                        <label></label>
+                    </div>
+                    <a href="#" class="forgot">Forgot your password?</a>
+                    <button type="submit" id="submit-btn-login">Sign In</button>
+                </form>
+            </div>
+            <div class="overlay-container" id="overlayCon">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Welcome Back!</h1>
+                        <p>To keep connected with us please login with your personal info</p>
+                        <button>Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Hello, Friend!</h1>
+                        <p>Enter your personal details and start journey with us</p>
+                        <button>Sign Up</button>
+                    </div>
+                </div>
+                <button id="overlayBtn"></button>
+            </div>
         </div>
     </div>
 
-    <!-- JS -->
+    <!-- Start footer -->
+    <footer>
+        <div class="container">
+            <div class="content">
+                <div class="text">
+                    <p>2023 Made by the best teem</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+    <!-- js code -->
     <script src="javascript/script.js"></script>
-    <script src="javascript/login.js" type="text/javascript"></script>
-    <script src="javascript/signup.js" type="text/javascript"></script>
+    <script src="javascript/start.js" type="text/javascript"></script>
+
 </body>
 
 </html>
