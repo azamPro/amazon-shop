@@ -1,6 +1,8 @@
 // Include express
 const express = require('express');
 const webApp = express();
+//include paypal
+const paypal = require('paypal-rest-sdk');
 // Include body-parser 
 const bodyParser = require('body-parser');
 // Configuring express to use body-parser as middle-ware
@@ -27,7 +29,7 @@ webApp.get('/retrieve', (req, res) => {
     if (authenticationLogin(decodeURIComponent(req.query.email), decodeURIComponent(req.query.password))) {
         res.send('1');
     } else {
-        console.log('wromg')
+        console.log('wrong')
         res.send('-1');
     }
 
@@ -43,7 +45,7 @@ webApp.post('/addUser',(req,res)=>{
 })
 
 let users = [
-    { email: 'jawahirah@gmail.com', name: 'jawahirah', password: '1234', cart:[{itemName:'watch',numberOfItems:1,cost:20}], totalCost:20 }
+    { email: 'jawahirah@gmail.com', name: 'jawahirah', password: '1234', cart:[{itemName:'watch',numberOfItems:1,cost:20}] }
 ]
 
 let authenticationLogin = (email, password) => {
@@ -65,10 +67,84 @@ let isTheEmailUsed= (email)=>{
         }
     }
     return false;
-}
+};
 
-function calculateTax(cost) {
-    const taxRate = 0.15; // 15% tax rate
-    const tax =  taxRate * cost;
-    return tax;
-  }
+//paypal
+
+paypal.configure({
+    'mode': 'sandbox', //sandbox or live
+    'client_id': 'ATikV68RhiGEfXm5ds59CyozvwSpavdMFHv1dDUQyC87O5NNlYvJ60dLUx9QwwFmmIhb5pJUTvU-p58U',
+    'client_secret': 'EM6ODtSidL01YKbycpwvFyxNIPzPatZZXwIYzX1KenBPXm3CGCaF3SiOnY1qL3hGCjXKyyPgnEiLXyAr'
+  });
+
+ 
+  webApp.get('/', (req, res) => res.sendFile(__dirname + "/payment.html"));
+  //Payment handler... don't change the currency
+  webApp.post('/pay', (req, res) => {
+    const create_payment_json = {
+      "intent": "sale",
+      "payer": {
+          "payment_method": "paypal"
+      },
+      "redirect_urls": {
+          "return_url": "http://localhost:8080/success",
+          "cancel_url": "http://localhost:8080/cancel"
+      },
+      "transactions": [{
+          "item_list": {
+              "items": [{
+                  "name": "Red Sox Hat",
+                  "sku": "001",
+                  "price": "25.00",
+                  "currency": "USD",
+                  "quantity": 1
+              }]
+          },
+          "amount": {
+              "currency": "USD", 
+              "total": "25.00"
+          },
+          "description": "Hat for the best team ever"
+      }]
+  };
+  //Success  handler
+  webApp.get('/success', (req, res) => {
+    const payerId = req.query.PayerID;
+    const paymentId = req.query.paymentId;
+  
+    const execute_payment_json = {
+      "payer_id": payerId,
+      "transactions": [{
+          "amount": {
+              "currency": "USD",
+              "total": "25.00"
+          }
+      }]
+    };
+  
+    paypal.payment.execute(paymentId, execute_payment_json, function (error, payment) {
+      if (error) {
+          console.log(error.response);
+          throw error;
+      } else {
+          console.log(JSON.stringify(payment));
+          res.send('Success');
+      }
+  });
+  });
+    paypal.payment.create(create_payment_json, function (error, payment) {
+        if (error) {
+            throw error;
+        } else {
+            for(let i = 0;i < payment.links.length;i++){
+              if(payment.links[i].rel === 'approval_url'){
+                res.redirect(payment.links[i].href);
+              }
+            }
+        }
+      });
+      
+      });
+
+     // Transaction cancellation
+      webApp.get('/cancel', (req, res) => res.send('Cancelled'));
