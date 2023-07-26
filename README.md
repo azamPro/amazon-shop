@@ -35,7 +35,7 @@ If you wish to set up the project locally, follow these steps:
 
 1. Clone the repository:
    ```
-   
+   https://github.com/azamPro/amazon-shop.git
    ```
 
 2. Install the required dependencies:
