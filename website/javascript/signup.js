@@ -13,7 +13,7 @@ submitButton2.addEventListener('click', () => {
    
    if(email2.length !=0 && password2.length!=0 && name.length!=0){
     console.log(email2)
-    RegisterUser(`http://localhost:8080/addUser`,{email: email2,name:name, password: password2})
+    RegisterUser(`http://localhost:8080/addUser`,{email: email2,name:name, password: password2,cart:[]});
   }
     
    
@@ -35,7 +35,7 @@ const RegisterUser= async (url,data)=>{
         if (response == '1') {
             window.location.href = `home.html`
         } else {
-            document.getElementById('error-msg-signup').innerText='Email or password wrong'
+            document.getElementById('error-msg-signup').innerText='Email is already taken'
         }
 
       }catch(error){
@@ -43,3 +43,4 @@ const RegisterUser= async (url,data)=>{
       }
 
 }
+

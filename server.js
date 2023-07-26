@@ -66,3 +66,9 @@ let isTheEmailUsed= (email)=>{
     }
     return false;
 }
+
+function calculateTax(cost) {
+    const taxRate = 0.15; // 15% tax rate
+    const tax =  taxRate * cost;
+    return tax;
+  }
