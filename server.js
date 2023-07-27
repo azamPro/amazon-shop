@@ -71,7 +71,9 @@ let isTheEmailUsed= (email)=>{
         }
     }
     return false;
-};
+}
+
+
 
 //paypal
 

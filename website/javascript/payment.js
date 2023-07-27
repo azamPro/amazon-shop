@@ -7,7 +7,7 @@ let tax = document.getElementById('tax');
 let total = document.getElementById('total');
 console.log(user)
 window.addEventListener('load', () => {
-    for (let i = 0; i < user.cart.length; i++) {
+    for (let i = 1; i < user.cart.length; i++) {
         let newRow = `
         <tr>
             <td >
@@ -28,8 +28,8 @@ window.addEventListener('load', () => {
 
     }
     price.innerText = user.totalCost;
-    tax.innerText = calculateTax();
-    total.innerText = user.totalCost + calculateTax();
+    tax.innerText = (calculateTax()).toFixed(2);
+    total.innerText = (user.totalCost + calculateTax()).toFixed(2);
 
 });
 

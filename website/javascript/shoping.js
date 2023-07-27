@@ -14,7 +14,7 @@ let addToCart= (user,item)=>{
         }
     }
     user.cart.push({itemName:item.itemName,numberOfItems:1,cost:item.cost})
-    user.totalCost+=item.cost
+    user.totalCost+=item.cost.toFixed(2)
    
 }
 buyButtons.forEach(button => {
