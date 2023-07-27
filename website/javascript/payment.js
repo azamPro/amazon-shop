@@ -6,6 +6,7 @@ let price = document.getElementById('price');
 let tax = document.getElementById('tax');
 let total = document.getElementById('total');
 console.log(user)
+// Display orders on the cart page
 window.addEventListener('load', () => {
     for (let i = 1; i < user.cart.length; i++) {
         let newRow = `
@@ -23,8 +24,6 @@ window.addEventListener('load', () => {
             <td  >${user.cart[i].cost}</td>
         </tr>`;
         firstRow.insertAdjacentHTML('afterend', newRow);
-
-        // Select the remove button and add an event listener
 
     }
     price.innerText = `Price: ${user.totalCost.toFixed(2)}`;

@@ -2,9 +2,8 @@
 const buyButtons = document.querySelectorAll('.buy-btn');
 
 let user= JSON.parse(sessionStorage.getItem("userData"));
-
+// Add products to user's cart
 let addToCart= (user,item)=>{
-    
     for(let i =0;i<user.cart.length;i++){
         if(user.cart[i].itemName== item.itemName){
             user.cart[i].numberOfItems++;
@@ -19,11 +18,9 @@ let addToCart= (user,item)=>{
 }
 buyButtons.forEach(button => {
     button.addEventListener('click', () => {
-      
-
+      // When the user clicks the buy now button, an action will be triggered
       addToCart(user,{itemName:button.getAttribute('name'),cost:parseFloat(button.dataset.price)})
       sessionStorage.setItem("userData", JSON.stringify(user));
-
       // Update user's cart items
      updateCart('http://localhost:8080/addItems',user);
       // Redirect user to cart page

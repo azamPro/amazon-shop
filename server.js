@@ -19,11 +19,10 @@ webApp.listen(port, () => {
     console.log('The server is up and running')
 })
 
-
+// Authentication
 webApp.get('/retrieve', (req, res) => {
-
 let user = authenticationLogin(decodeURIComponent(req.query.email), decodeURIComponent(req.query.password))
-
+// Return user objet
     if (user === false) {
         res.json({ success: false })
     } else {
@@ -46,7 +45,7 @@ webApp.post('/addUser',(req,res)=>{
 let totalPrice=0;
 // Add products
 webApp.post('/addItems',(req,res)=>{
-  
+  // Update user cart
     addItemsToCart(req.body.email,req.body.cart)
     res.send('1')
 })

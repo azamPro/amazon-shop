@@ -5,9 +5,8 @@ form.addEventListener('submit', (event) => {
     event.preventDefault(); // Prevent the default form submission behavior
 });
 
-
 let submitButton = document.getElementById('submit-btn-login');
-
+// When the user clicks the login button, an action will be triggered
 submitButton.addEventListener('click', () => {
     let email = document.getElementById('email-login').value;
     let password = document.getElementById('password-login').value;
