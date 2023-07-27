@@ -19,7 +19,7 @@ submitButton2.addEventListener('click', () => {
    
 })
 
-const RegisterUser= async (url,data)=>{
+const RegisterUser= async (url,userData)=>{
     const request= await fetch(url, {
         method: 'POST',
         credentials: 'same-origin',
@@ -27,13 +27,16 @@ const RegisterUser= async (url,data)=>{
           'Content-Type': 'application/json',
         },
         // Body data type must match "Content-Type" header        
-        body: JSON.stringify(data),
+        body: JSON.stringify(userData),
       });
 
       try{
         const response= await request.json();
         if (response == '1') {
-            window.location.href = `home.html`
+          // Set a session storage item
+          sessionStorage.setItem("userData", JSON.stringify(userData));
+          // Redirect user to home page
+          window.location.href = `home.html`
         } else {
             document.getElementById('error-msg-signup').innerText='Email is already taken'
         }

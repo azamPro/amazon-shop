@@ -13,7 +13,6 @@ submitButton.addEventListener('click', () => {
     let password = document.getElementById('password-login').value;
    
    if(email.length !=0 && password.length!=0){
-    console.log(email)
     sendMessageToTheServer(`http://localhost:8080/retrieve?email=${email}&password=${password}`)
    }
     
@@ -21,14 +20,19 @@ submitButton.addEventListener('click', () => {
 })
 
 const sendMessageToTheServer = async (url) => {
+    // GET request 
     const request = await fetch(url);
-
     try {
-        const response = await request.json();
-        if (response == '1') {
-            window.location.href = `home.html`
-        } else {
+        // Server Response 
+        const userData = await request.json();
+        if (userData.success == false) {
+            // Show the user an error message 
             document.getElementById('error-msg-login').innerText='Email or password wrong'
+        } else {
+            // Set a session storage item
+            sessionStorage.setItem("userData", JSON.stringify(userData));
+            // Redirect user to home page
+            window.location.href = `home.html`
         }
 
     } catch (error) {

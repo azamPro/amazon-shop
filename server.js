@@ -24,15 +24,20 @@ webApp.listen(port, () => {
 //          respond with -1 if the user incorrect credentials 
 webApp.get('/retrieve', (req, res) => {
 
-    if (authenticationLogin(decodeURIComponent(req.query.email), decodeURIComponent(req.query.password))) {
-        res.send('1');
+let user = authenticationLogin(decodeURIComponent(req.query.email), decodeURIComponent(req.query.password))
+
+    if (user === false) {
+        console.log(user)
+        res.json({ success: false })
     } else {
-        console.log('wromg')
-        res.send('-1');
+        console.log(user)
+        res.json(user)
+
     }
 
 })
 
+// New User Registration
 webApp.post('/addUser',(req,res)=>{
     if(isTheEmailUsed(req.body.email)){
         res.send('-1')
@@ -43,21 +48,20 @@ webApp.post('/addUser',(req,res)=>{
 })
 
 let users = [
-    { email: 'jawahirah@gmail.com', name: 'jawahirah', password: '1234', cart:[{itemName:'watch',numberOfItems:1,cost:20}], totalCost:20 }
+    { email: 'jawahirah@gmail.com', name: 'jawahirah', password: '1234', cart:[], totalCost:0}
 ]
 
+// Check user login credentials
 let authenticationLogin = (email, password) => {
     for (let i = 0; i < users.length; i++) {
-
         if (users[i].email.toLowerCase() === email.toLowerCase() && users[i].password.toLowerCase() === password.toLowerCase()) {
-            return true;
+            return users[i];
         }
-
     }
     return false
-
 }
 
+// Check if the email is already used 
 let isTheEmailUsed= (email)=>{
     for(let i = 0; i< users.length;i++){
         if(users[i].email.toLowerCase() == email.toLowerCase()){
@@ -67,8 +71,3 @@ let isTheEmailUsed= (email)=>{
     return false;
 }
 
-function calculateTax(cost) {
-    const taxRate = 0.15; // 15% tax rate
-    const tax =  taxRate * cost;
-    return tax;
-  }
