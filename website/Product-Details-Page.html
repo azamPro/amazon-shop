@@ -4,8 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- main style -->
+        <link rel="stylesheet" href="css/main-style.css">
+        <!-- font awesome Libery -->
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/Product-Details-Page-style.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
@@ -14,7 +21,37 @@
 </head>
 
 <body>
-
+    <!-- Start header -->
+    <header>
+        <div class="container">
+            <a href="home.html" class="logo">
+                <h2>Amazon-shop</h2>
+            </a>
+            <div class="search">
+                <input type="search" placeholder="type kyword" class="in-search">
+            </div>
+            <nav>
+                <i class="fas fa-bars toggle-menu"></i>
+                <ul>
+                    <li><a href="home.html" class="">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="cart.html">cart</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="index.html">Sign-in</a></li>
+                </ul>
+            </nav>
+            <div class="form-1 hide">
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+            <div class="form-2">
+                <a href="index.html">sign-in</a>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+    <section>
     <div class="container">
         <div class="Product">
             <div class="gallery">
@@ -86,33 +123,27 @@
                         <input type="number" value="1">
 
                     </div>
-                    <button>Buy Now</button>
-
+                    <div class="link">
+                        <a href="cart.html">Buy Now</a>
+                    </div>
+                    
                 </form>
-
-
             </div>
         </div>
-
-
-
-
     </div>
+</section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Start footer -->
+<footer>
+    <div class="container">
+        <div class="content">
+            <div class="text">
+                <p>2023 Made by the best teem</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End footer -->
     <script src="javascript/product-details-script.js"></script>
 </body>
 

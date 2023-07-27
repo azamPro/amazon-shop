@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Payment</title>
     <!-- Main style -->
     <link rel="stylesheet" href="css/main-style.css">
@@ -14,8 +16,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
+
 <body>
+    
     <header>
         <!-- Start header -->
         <div class="container">
@@ -28,7 +33,7 @@
             <nav>
                 <i class="fas fa-bars toggle-menu"></i>
                 <ul>
-                    <li><a href="home.html" >Home</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="product.html" class="active">Product</a></li>
                     <li><a href="account.html">Account</a></li>
                     <li><a href="cart.html">cart</a></li>
@@ -55,7 +60,11 @@
                 </div>
                 <div class="down">
                     <div class="col-1">
-                        <a href="">Paypal</a>
+                        <!-- <a href="">Paypal</a>-->
+                        <h3>Total price:SAR 4000</h3>
+                         <form action="/pay" method="post">
+                            <input type="submit" value="Paypal">
+                          </form>
                     </div>
                     <div class="col-1 text">
                         <p>sorry now we use just Paypal
@@ -76,5 +85,7 @@
         </div>
     </footer>
     <!-- End footer -->
+
 </body>
+
 </html>

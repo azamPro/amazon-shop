@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-.container{
+section .container{
     width: 100%;
     min-height: 100vh;
     background: #dedddd ;
@@ -72,28 +72,21 @@
         align-items: center;
         margin-top: 50px;
 }
-
 .size-select p{
     width: 70px;
 }
-
 .size-select input:checked + span {
-  color: #146C94;
-  font-weight: 600; 
+    color: #146C94;
+    font-weight: 600; 
 }
-
 .size-select input {
     display: none;
 }
-
-
 .size-select span{
-    
     padding: 5px;
     margin-right: 10px;
     cursor: pointer;
 }
-
 .color-select {
     display: flex;
     align-items: center;
@@ -110,9 +103,8 @@
     margin-right: 15px;
     cursor: pointer;
 }
-
 .Color-1{
- background: red;
+    background: red;
 }
 .Color-2{
     background: #00d874;
@@ -123,27 +115,21 @@
 .Color-4 {
     background: pink;
 }
-
 .color-select input{
     display: none;
 }
-
 .color-select input:checked + span {
     transform: scale(0.7);
     box-shadow: 0 0 0 4px #FFF,0 0 0 6px #146C94;
 } 
-
 .quantity-select{
     display: flex;
     align-items: center;
     margin-top: 20px;
-
 }
-
 .quantity-select p{
     width: 75px;
 }
-
 .quantity-select input {
     background: #eee;
     border: 0;
@@ -153,8 +139,7 @@
     border-radius: 12px;
     
 }
-
-form button {
+form .link {
     background: #146C94;
     color: #FFF;
     font-size: 17px;
@@ -166,23 +151,49 @@ form button {
     margin-top:50px;
     box-shadow: 0 10px 10px rgba(34, 29, 74, 0.25);
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
 }
-
+form .link a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
 .controls{
     position: absolute;
     bottom: 40px;
     right: 20px;
 }
-.btn{
+/* button{
     display: block;
     width: 10px;
     height: 10px;
-   border-radius: 50%;
-   background: #146C94;
-   margin: 10px;
-   cursor: pointer; 
+    border-radius: 50%;
+    background: #146C94;
+    margin: 10px;
+    cursor: pointer; 
 }
+.link-1{
+    text-align: center;
+} */
 
 .btn.active {
     background: #eee;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer mark {
+    padding: 8px 30px;
+    border-radius: 7px;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #003;
 }

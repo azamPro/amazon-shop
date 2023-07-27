@@ -7,44 +7,19 @@
 }
 
 :root {
-    
     --linear-grad: linear-gradient(to right, #146C94, #66aac6);
     --grad-clr1: #146C94;
     --grad-clr2: #AFD3E2;
 }
 
-body {
-    height: 100vh;
-    background: #f6f5f7;
+.body {
+    /* height: 100vh; */
+    margin-top: 220px;
     display: grid;
     place-content: center;
     font-family: 'Poppins', sans-serif;
 }
-
-
-
-footer {
-    position: absolute;
-    left: 50%;
-    bottom: 30px;
-    transform: translateX(-50%);
-}
-
-footer mark {
-    padding: 8px 30px;
-    border-radius: 7px;
-}
-
-footer a {
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    color: #003;
-}
-
-
-
-.container{
+.body .container{
     position: relative;
     width: 850px;
     height: 500px;
@@ -289,10 +264,10 @@ p{
         opacity: 0;
         z-index: 1;
     }
-   50.1%,100% {
+    50.1%,100% {
     opacity: 1;
     z-index: 5;
-   } 
+} 
 }
 
 .btnScaled {
@@ -300,24 +275,35 @@ p{
 }
 
 @keyframes scaleBtn {
-    0%{
-       width: 143.67px;
-
-    }
-
-        50% {
-            width: 250px;
-    
-        }
-
-                100% {
-                    width: 143.67px;
-        
-                }
+0%{
+width: 143.67px;
 
 }
+50% {
+width: 250px;
+}
+100% {
+    width: 143.67px;
+}
+}
 
-p#error-msg-login,
-div#error-msg-signup {
-    color: red;
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer .container .content{
+    padding: 0;
+}
+footer mark {
+    padding: 8px 30px;
+    border-radius: 7px;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #003;
 }
