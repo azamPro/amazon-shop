@@ -50,7 +50,7 @@ webApp.post('/addUser',(req,res)=>{
 })
 
 let users = [
-    { email: 'jawahirah@gmail.com', name: 'jawahirah', password: '1234', cart:[{itemName:'none',numberOfItems:0;cost:0}], totalCost:0}
+    { email: 'jawahirah@gmail.com', name: 'jawahirah', password: '1234', cart:[{itemName:'none',numberOfItems:0,cost:0}], totalCost:0}
 ]
 
 // Check user login credentials
