@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    
+
     <header>
         <!-- Start header -->
         <div class="container">
@@ -61,10 +61,10 @@
                 <div class="down">
                     <div class="col-1">
                         <!-- <a href="">Paypal</a>-->
-                        <h3>Total price:SAR 4000</h3>
-                         <form action="/pay" method="post">
+                        <h3 id="price">Total price:SAR 4000</h3>
+                        <form action="/pay" method="post">
                             <input type="submit" value="Paypal">
-                          </form>
+                        </form>
                     </div>
                     <div class="col-1 text">
                         <p>sorry now we use just Paypal
@@ -85,6 +85,16 @@
         </div>
     </footer>
     <!-- End footer -->
+    <!-- JS -->
+    <script>
+        let user = JSON.parse(sessionStorage.getItem("userData"));
+        document.getElementById('price').innerText=`Total price: ${((user.totalCost*0.15)+user.totalCost).toFixed(2)}`;
+
+
+
+
+
+    </script>
 
 </body>
 

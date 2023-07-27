@@ -27,9 +27,9 @@ window.addEventListener('load', () => {
         // Select the remove button and add an event listener
 
     }
-    price.innerText = user.totalCost;
-    tax.innerText = (calculateTax()).toFixed(2);
-    total.innerText = (user.totalCost + calculateTax()).toFixed(2);
+    price.innerText = `Price: ${user.totalCost.toFixed(2)}`;
+    tax.innerText = `Tax: ${(calculateTax()).toFixed(2)}`;
+    total.innerText = `Total Price: ${(user.totalCost + calculateTax()).toFixed(2)}`;
 
 });
 

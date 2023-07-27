@@ -14,7 +14,7 @@ let addToCart= (user,item)=>{
         }
     }
     user.cart.push({itemName:item.itemName,numberOfItems:1,cost:item.cost})
-    user.totalCost+=item.cost.toFixed(2)
+    user.totalCost+=item.cost
    
 }
 buyButtons.forEach(button => {
@@ -23,11 +23,32 @@ buyButtons.forEach(button => {
 
       addToCart(user,{itemName:button.getAttribute('name'),cost:parseFloat(button.dataset.price)})
       sessionStorage.setItem("userData", JSON.stringify(user));
+
+      // Update user's cart items
+     updateCart('http://localhost:8080/addItems',user);
+      // Redirect user to cart page
       window.location.href='cart.html'
    
     });
   });
 
 
+let updateCart= async (url,user)=>{
+    let request= await fetch(url, {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        // Body data type must match "Content-Type" header        
+        body: JSON.stringify(user),
+      });
+      try{
+        let respone= await request.json()
+        console.log(respone)
+      }catch(error){
+        console.log(error)
+      }
 
+}
  

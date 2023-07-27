@@ -20,19 +20,13 @@ webApp.listen(port, () => {
 })
 
 
-// send email and passwords 
-// loop through the array and check the email and passwords
-//          respond with  1 if the user correct credentials 
-//          respond with -1 if the user incorrect credentials 
 webApp.get('/retrieve', (req, res) => {
 
 let user = authenticationLogin(decodeURIComponent(req.query.email), decodeURIComponent(req.query.password))
 
     if (user === false) {
-        console.log(user)
         res.json({ success: false })
     } else {
-        console.log(user)
         res.json(user)
 
     }
@@ -49,9 +43,43 @@ webApp.post('/addUser',(req,res)=>{
     }
 })
 
+let totalPrice=0;
+// Add products
+webApp.post('/addItems',(req,res)=>{
+  
+    addItemsToCart(req.body.email,req.body.cart)
+    res.send('1')
+})
+
+
+// Add new items to user's cart 
+let addItemsToCart = (email, cart) => {
+    for (let i = 0; i < users.length; i++) {
+      if (users[i].email === email) {
+        // Remove existing items from the cart
+        users[i].cart = [];
+        users[i].totalCost=0;
+  
+        // Add new items to the cart
+        for (let j = 0; j < cart.length; j++) {
+          let item = cart[j];
+          users[i].cart.push({
+            itemName: item.itemName,
+            numberOfItems: item.numberOfItems,
+            cost: item.cost
+          });
+          users[i].totalCost+= cart[j].cost
+         
+        }
+        totalPrice= (users[i].totalCost*0.15)+users[i].totalCost;
+      }
+    }
+  };
+
 let users = [
     { email: 'jawahirah@gmail.com', name: 'jawahirah', password: '1234', cart:[{itemName:'none',numberOfItems:0,cost:0}], totalCost:0}
 ]
+
 
 // Check user login credentials
 let authenticationLogin = (email, password) => {
@@ -108,7 +136,7 @@ paypal.configure({
           },
           "amount": {
               "currency": "USD", 
-              "total": "25.00"
+              "total": totalPrice
           },
           "description": "Hat for the best team ever"
       }]
@@ -123,7 +151,7 @@ paypal.configure({
       "transactions": [{
           "amount": {
               "currency": "USD",
-              "total": "25.00"
+              "total": totalPrice
           }
       }]
     };
