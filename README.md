@@ -50,7 +50,7 @@ If you wish to set up the project locally, follow these steps:
 
 3. Start the development server:
    ```
-   npm start
+   node server.js
    ```
 
 The website will be accessible at `http://localhost:3000/`.
