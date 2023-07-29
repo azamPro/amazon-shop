@@ -53,7 +53,7 @@ If you wish to set up the project locally, follow these steps:
    node server.js
    ```
 
-The website will be accessible at `http://localhost:3000/`.
+The website will be accessible at `http://localhost:8080/`.
 
 ## Usage
 
