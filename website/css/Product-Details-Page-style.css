@@ -4,14 +4,17 @@
     font-family: 'Poppins',sans-serif;
     box-sizing: border-box;
 }
-
+section{
+    
+}
 section .container{
     width: 100%;
     min-height: 100vh;
-    background: #dedddd ;
+    
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 50px 0;
 }
 
 .Product{
@@ -164,26 +167,15 @@ form .link a{
     bottom: 40px;
     right: 20px;
 }
-/* button{
-    display: block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #146C94;
-    margin: 10px;
-    cursor: pointer; 
-}
-.link-1{
-    text-align: center;
-} */
+
 
 .btn.active {
     background: #eee;
 }
 
 footer{
-    position: fixed;
-    bottom: 0;
+    /* position: fixed;
+    bottom: 0; */
     width: 100%;
 }
 footer mark {

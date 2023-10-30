@@ -11,6 +11,9 @@ header{
     text-align: start;
 }
 footer{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
     margin-top: 150px;
     -webkit-box-shadow: 0 7.5px 23px 9px #a1cfde;
     -moz-box-shadow: 0 7.5px 23px 9px #a1cfde;
