@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in || Sign up from</title>
-    <!-- font awesome icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- main style -->
-        <link rel="stylesheet" href="css/main-style.css">
-        <!-- font awesome Libery -->
+    <title>Amazon shop</title>
+    <!-- Main style -->
+    <link rel="stylesheet" href="css/main-style.css">
+    <!-- font awesome Libery -->
     <link rel="stylesheet" href="css/all.min.css">
-    <!-- css stylesheet -->
-    <link rel="stylesheet" href="css/login-signup.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <!-- Start header -->
     <header>
@@ -31,11 +26,11 @@
             <nav>
                 <i class="fas fa-bars toggle-menu"></i>
                 <ul>
-                    <li><a href="home.html" class="">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="product.html">Product</a></li>
-                    <li><a href="cart.html">cart</a></li>
+                    <li><a href="cart.html">Cart</a></li>
                     <li><a href="support.html">Support</a></li>
-                    <li><a href="index.html">Sign-in</a></li>
+                    <li><a href="login.html">Sign-in</a></li>
                 </ul>
             </nav>
             <div class="form-1 hide">
@@ -44,76 +39,129 @@
                 </a>
             </div>
             <div class="form-2">
-                <a href="index.html">sign-in</a>
+                <a href="login.html">sign-in</a>
             </div>
         </div>
     </header>
     <!-- end header -->
-    <div class="body">
-        <div class="container" id="container">
-            <div class="form-container sign-up-container">
-                <form action="#">
-                    <h1>Create Account</h1>
-                    <!-- <div class="social-container">
-                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                    </div> -->
-                    <span> use your email for registration</span>
-                    <div class="infield">
-                        <input type="text" placeholder="Name" />
-                        <label></label>
-                    </div>
-                    <div class="infield">
-                        <input type="email" placeholder="Email" name="email" />
-                        <label></label>
-                    </div>
-                    <div class="infield">
-                        <input type="password" placeholder="Password" />
-                        <label></label>
-                    </div>
-                    <button>Sign Up</button>
-                </form>
+
+    <!-- start landing -->
+    <div class="landing">
+        <div class="overly">
+            <div class="text">
+                <div class="content">
+                    <h2>Hello on Amazon-shop!</h2>
+                        <p>Here you can find anything you want to buy, just begin!</p>
+                </div>
+                <div class="btn-shop">
+                    <a href="product.html">shop now!</a>
+
+                </div>
             </div>
-            <div class="form-container sign-in-container">
-                <form action="#">
-                    <h1>Sign in</h1>
-                    <!-- <div class="social-container">
-                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                    </div> -->
-                    <span> use your account</span>
-                    <div class="infield">
-                        <input type="email" placeholder="Email" name="email" id="email-login" />
-                        <label></label>
+        </div>
+        <i class="fas fa-angle-left change-background fa-2x"></i>
+        <i class="fas fa-angle-right change-background fa-2x"></i>
+        <ul class="bullets">
+            <li></li>
+            <li class="active"></li>
+            <li></li>
+        </ul>
+    </div>
+    <!-- end landing -->
+    <!-- Start product -->
+    <div class="product">
+        <div class="container">
+            <h1 class="spcial-section">PRODUCT</h1>
+            <div class="container2">
+                <div class="card">  
+                    <div class="box">
+                        <div class="imgbx">
+                            <a href="Product-Details-Page.html"><img src="image/cam.jpg" alt="Camera">
+                        </div>
+                        <div class="text">
+                            <h3>Camera</h3>
+                            <h4>this is camera canon d650</h4>
+                        </div>
+                            </a>
+                        <div class="btn" id="camera-canon" name="Camera Canon" price=" SAR 3299.9">
+                            <button class="buy-btn"  name="camera-canon"  data-price="3229.9"  >Buy now</button>
+                            <p>SAR 3299.9</p>
+                        </div>
                     </div>
-                    <div class="infield">
-                        <input type="password" placeholder="Password" id="password-login"/>
-                        <label></label>
+                    <div class="box">
+                        <div class="imgbx">
+                            <a href="Product-Details-Page.html"><img src="image/bag.jpg" alt="Bag">
+                        </div>
+                        <div class="text">
+                            <h3>Bag</h3>
+                            <h4>this is hand Bag</h4>
+                        </div></a>
+                        <div class="btn" id="Hand-Bage" name="Hand Bag" price=" SAR 90.9">
+                            <button class="buy-btn" name="hand-bag" data-price="90.9">Buy now</button>
+                            <p>SAR 90.9</p>
+                        </div>
                     </div>
-                    <a href="#" class="forgot">Forgot your password?</a>
-                    <button type="submit" id="submit-btn-login">Sign In</button>
-                </form>
-            </div>
-            <div class="overlay-container" id="overlayCon">
-                <div class="overlay">
-                    <div class="overlay-panel overlay-left">
-                        <h1>Welcome Back!</h1>
-                        <p>To keep connected with us please login with your personal info</p>
-                        <button>Sign In</button>
+                    <div class="box">
+                        <div class="imgbx">
+                            <a href="Product-Details-Page.html"><img src="image/shoes.jpg" alt="shoes">
+                        </div>
+                        <div class="text">
+                            <h3>Shoes</h3>
+                            <h4>this is Shoes</h4>
+                        </div></a>
+                        <div class="btn" id="shoes" name="shoes" price=" SAR 359.9">
+                            <button class="buy-btn" name="shoes" data-price="359.9">Buy now</button>
+                            <p>SAR 359.9</p>
+                        </div>
                     </div>
-                    <div class="overlay-panel overlay-right">
-                        <h1>Hello, Friend!</h1>
-                        <p>Enter your personal details and start journey with us</p>
-                        <button>Sign Up</button>
+                    <div class="box">
+                        <div class="imgbx">
+                            <a href="Product-Details-Page.html"><img src="image/watch.jpg" alt="Watch">
+                        </div>
+                        <div class="text">
+                            <h3>Watch</h3>
+                            <h4>this is  Watch</h4>
+                        </div></a>
+                        <div class="btn" id="Watch" name="Watch" price=" SAR 199.9">
+                            <button class="buy-btn" name="Watch" data-price="199.9">Buy now</button>
+                            <p>SAR 199.9</p>
+                        </div>
                     </div>
                 </div>
-                <button id="overlayBtn"></button>
             </div>
         </div>
     </div>
-
+    <!-- End product -->
+    <!-- Start Feature -->
+    <div class="feature">
+        <div class="container">
+            <h1 class="spcial-section">FEATURE</h1>
+            <div class="content">
+                <div class="colume">
+                    <i class="fa-solid fa-truck"></i>
+                    <div class="text">
+                        <h2>Fast delivery</h2>
+                        <p>we delivety in 1 day and you can see</p>
+                    </div>
+                </div>
+                <div class="colume">
+                    <i class="fa-solid fa-user-clock"></i>
+                    <div class="text">
+                        <h2>Support 24 / 7</h2>
+                        <p>We here everytime you want help!</p>
+                    </div>
+                </div>
+                <div class="colume">
+                    <i class="fa-solid fa-percent"></i>
+                    <div class="text">
+                        <h2>30% off</h2>
+                        <p>there is a copon to have a 30% off</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Feature -->
     <!-- Start footer -->
     <footer>
         <div class="container">
@@ -125,10 +173,7 @@
         </div>
     </footer>
     <!-- End footer -->
-    <!-- js code -->
-    <script src="javascript/script.js"></script>
-    <script src="javascript/start.js" type="text/javascript"></script>
-
+    <!-- JS -->
+    <script src="javascript/shoping.js" type="text/javascript"></script>
 </body>
-
 </html>

@@ -458,12 +458,13 @@ header .form-2{
 /* Footer */
 footer{
     background-color: var(--third-color);
-    -webkit-box-shadow: 0 7.5px 23px 9px #a1cfde;
-    -moz-box-shadow: 0 7.5px 23px 9px #a1cfde;
-    box-shadow: 0 7.5px 23px 9px #a1cfde;
+    
 }
 footer .container .content{
     text-align: center;
     padding: 20px;
     font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
 }
